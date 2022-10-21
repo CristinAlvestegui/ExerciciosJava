@@ -2,6 +2,7 @@
 A = 10;
 B = 20;
 aux = 0;
+nota1 = 0;
 
 
 //Função 1º exercicio
@@ -72,12 +73,54 @@ function exerci5(){
 //Função 6º exercicio
 function exerci6(){
     salar = prompt("Informe o salário mensal: ");
-    reaju = (salar * 10.2)/100
+    reaju = (parseFloat(salar) * 10.2)/100
     console.log("O reajuste de 2022 foi do 10,2% \n Seu salário é de: " + salar +
     "\nJunto con o reajuste fico um total de: " + (salar + reaju));
 }//Fim da função do 6º Exercicio
 
-//Função 5º exercicio
-function exerci7(){
-    nota1 = prompt("");
-}//Fim da função do 6º Exercicio
+//Função 8º exercicio
+function exerci8(){
+    nome = prompt("Informe seu Nome: ");
+    console.log("Bem-Vindo! " + nome +", ao portal de Notas!");
+    nota1 = prompt("Informe a primeira nota: ");
+    nota2 = prompt("Informe a segunda  nota: ");
+    nota3 = prompt("Informe a terceira nota: ");
+    media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3))/3
+    console.log( nome + " A média final é de: " + media);
+}//Fim da função do 8º Exercicio
+
+//Função 8º exercicio
+function exerci9(){
+    maca = prompt("Bem-Vindo!\nQuantas maças voçê vai comprar hoje?: ");
+    if(maca < 12){
+        total = parseFloat(maca) * 1.3
+    }else{
+        total = parseFloat(maca)
+    }
+    console.log("Obrigada pela compra!\nSua compra foi um Total de: "
+    + total + "R$");
+}//Fim da função do 9º Exercicio
+
+//Função 11º exercicio
+function exerci11(){
+    nome = prompt("Informe seu Nome: ");
+    console.log("Bem-Vindo! " + nome +", ao portal do SenaBank");
+    conta = prompt("Por favor informe o número de sua conta: ");
+    console.log("CC: " + conta);
+    saldo = prompt("Agora informe seu saldo: ");
+    console.log( nome + " o saldo atual é de: " + parseFloat(saldo) + "R$");
+    debit = prompt("Os Débitos: ");
+    credi = prompt("Ultimo! .... Créditos: ");
+    salnow = (saldo - debit - credi); /*só pode ser subtração...quando pago no débito o saldo é descontado na hora!
+    mas no crédito é igual a unica diferença é que vc vai pagar depois... só pode subtrair
+    Banco suspeito...
+    */
+    if(salnow <= 0){
+       console.log(":(  Saldo Negativo!  x.X \n\n" + salnow + "R$");
+       //Quero colocar uma tag de tabela aqui.
+    }else{
+        console.log(":)  Saldo Possitivo!  x.X \n\n" + salnow + "R$");
+    }
+}//Fim da função do 11º Exercicio
+
+exerci11();

@@ -123,4 +123,42 @@ function exerci11(){
     }
 }//Fim da função do 11º Exercicio
 
+//Função 12º exercicio
+function exerci12(){
+    do{
+        valor = propmt("Informe um valor: ");
+        if(valor < 10){
+            console.log("Só aceitamos valores positivos!\nTente novamente");
+        }else{
+            valor = prompt("Voltei para linha do fluxo básico!....haushaushau não sei n tenhho documentação...emojicons");
+        }
+    }while(valor < 10);
+    //quero ter uma mensagem que só seja visualizada se usuário deve entrar de novo no loop, depois de ter entrado pela primeira vez.
+    
+}//Fim da função do 12º Exercicio Não foi testado ainda!
+
+//Função de validação estilo Visual G bling, bling! bling! ;)  :)
+function valiG(let valor){
+    if(){
+        //porque faziamos função de validação se colocavamos no repita ate? colocar no do while é a msm coisa???
+    }
+}//acabou a função estilo visual g.....
+
+
+//Função do 14º exercicio
+function exerci14(){
+    numero = ("Informe um valor: ");
+    if(numero > 0){
+        console.log("pssst!....podem ser números negativos!\n" + "          ;)  ");
+        
+    }else{
+        contar = ++;
+        if(contar > 1){
+            Console.log("Você digitou!  " + contar + " números negativos!  O_X   x_o");
+        }else{
+            Console.log("Você digitou!  " + contar + " número negativo!  O_X   x_o");
+        }
+    }
+}
+
 exerci11();

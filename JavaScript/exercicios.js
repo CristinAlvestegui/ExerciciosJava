@@ -1,70 +1,57 @@
 //Declaração de Variáveis
+opcao = -1;
 A = 10;
 B = 20;
 aux = 0;
+nota1 = 0;
 
-function menu(){
-    this.opcao = prompt("---- Menu ----\n"  + 
-                        "0. Sair\n"         +
-                        "1. Exercício 01\n" + 
-                        "2. Exercício 02\n" +
-                        "3. Exercício 03\n" +
-                        "4. Exercício 04\n" +
-                        "5. Exercício 05\n" +
-                        "6. Exercício 06\n" +
-                        "7. Exercício 07\n" +
-                        "8. Exercício 08\n" +
-                        "9. Exercício 09\n" +
-                        "10. Exercício 10\n" +
-                        "11. Exercício 11\n" +
-                        "Escolha uma das opções"
-                        );
-}//fim da função menu
 
-function operacao(){
-    menu();//Chamar o menu de opções
-    switch(this.opcao){
-        case '0':
-            console.log("Obrigado!");
+/*function menu(){
+    console.log("------Menu------ \n\n" +
+    "  Exercicio 1\n" +
+    "  Exercicio 2\n" +
+    "  Exercicio 3\n" +
+    "  Exercicio 4\n" +
+    "  Exercicio 5\n" +
+    "  Exercicio 6\n" +
+    "  Exercicio 8\n" +
+    "  Exercicio 9\n" +
+    "  Exercicio 11\n" +
+    "  0. Sair");
+}
+function exeMenu(){
+    
+    switch(opcao){
+        case 1:
+            exerci1();
             break;
-        case '1':
-            console.log("Exercício 01:\n " + exerci1());
+        case 2:
+            exerci2();
             break;
-        case '2':
-            console.log("Exercício 02:\n " + exerci2());
+        case 3:
+            exerci3();
             break;
-        case '3':
-            console.log("Exercício 03:\n " + exerci3());
+        case 4:
+            exerci4();
             break;
-        case '4':
-            console.log("Exercício 04:\n " + exerci4());
+        case 5:
+            exerci5();
             break;
-        case '5':
-            console.log("Exercício 05:\n " + exerci5());
+        case 6:
+            exerci6();
             break;
-        case '6':
-            console.log("Exercício 06:\n " + exerci6());
+        case 8:
+            exerci8();
             break;
-        case '7':
-            console.log("Exercício 07:\n " + exerci7());
+        case 9:
+            exerci9();
             break;
-        case '8':
-            console.log("Exercício 08:\n " + exerci8());
+        case 11:
+            exerci11();
             break;
-        case '9':
-            console.log("Exercício 09:\n " + exerci9());
-            break;
-        case '10':
-            console.log("Exercício 10:\n " + exerci10());
-            break;
-        case '11':
-            console.log("Exercício 11:\n " + exerci11());
-            break;
-        default:
-            console.log("Escolha uma opção válida!");
-            break; 
-    }//fim do switch 
-}//fim da função operação
+    }   
+    
+}*/
 
 
 //Função 1º exercicio
@@ -111,7 +98,7 @@ function exerci4(){
     resulAno = idade * 365;
     console.log("Sua idade: " + idade + " expressa em dias é: " + resulAno);
     console.log("O mês: " + mes + " expresso em dias é: " + resultado);
-    console.log("A soma de todos os dias fazem um total de: " + (resultado + resulAno + dia));
+    console.log("A soma todos os dias fazem um total de: " + (resultado + resulAno + dia));
 }//Fim da função do 4º Exercicio
 
 //Função 5º exercicio
@@ -135,18 +122,21 @@ function exerci5(){
 //Função 6º exercicio
 function exerci6(){
     salar = prompt("Informe o salário mensal: ");
-    reaju = (salar * 10.2)/100
+    reaju = (parseFloat(salar) * 10.2)/100
     console.log("O reajuste de 2022 foi do 10,2% \n Seu salário é de: " + salar +
     "\nJunto con o reajuste fico um total de: " + (salar + reaju));
 }//Fim da função do 6º Exercicio
 
 //Função 7º exercicio
 function exerci7(){
-    fabri = prompt("Informe o valor de custo de fábrica: ");
-    console.log("Custo de Fábrica: " + fabri);
-    total = ((fabri * 45) / 100) + ((fabri * 28) / 100)
-    console.log("Mais o 45% de impostos e o 28% do Distribuidor fico um total de: " + total);
-}//Fim da função do 7º Exercicio
+    //carroNovo = (custoFabri + impostos=45%) + %distribuidor = 28%
+    cusF = prompt("Informe o Custo de fábrica");
+    porF = parseFloat(cusF) + (parseFloat(cusF) * 0.28) + (parseFloat(cusF) * 0.45);904
+    total = porF;
+    console.log("O valor registrado foi de: " + cusF +"R$\nJunto com o porcentual do distribuidor e os impostos fico um total de: " +
+    total + "R$");
+
+}
 
 //Função 8º exercicio
 function exerci8(){
@@ -171,28 +161,6 @@ function exerci9(){
     + total + "R$");
 }//Fim da função do 9º Exercicio
 
-//Função 10º exercicio
-function exerci10(){
-    nome = prompt("Informe seu Nome: ");
-    console.log("Bem-Vindo! " + nome +", ao portal do Vendedor!");
-    salar = prompt("Informe seu salario fixo: ");
-    console.log("Salario fixo é de: " + salar);
-    venda = prompt("Informe o valor total de vendas: ");
-    if(venda == 1500){
-        comi = (venda * 3) / 100;
-        console.log(nome + "sua comissão das vendas foi de: " + comi);
-        console.log("total de: " + (salar +comi));
-    }else{
-        if(venda > 1500){
-            comi = (venda * 5) / 100;
-            console.log(nome + "sua comissão das vendas foi de: " + comi);
-            console.log("total de: " + (salar +comi));
-        }else{
-            console.log("+_+  Não teve comissao  :( ");
-        }
-    }
-}
-
 //Função 11º exercicio
 function exerci11(){
     nome = prompt("Informe seu Nome: ");
@@ -215,39 +183,17 @@ function exerci11(){
     }
 }//Fim da função do 11º Exercicio
 
+/*menu();
+opcao = prompt("Escolha um exercicio");
+exeMenu(opcao);*/
 
-//Função 12º exercicio
-function exerci12(){
-    num = prompt("Informe um valor: ");
-    if(num > 10){
-        console.log("Somente são válidos numeros entre 1 e 10");
-    }else{
-        console.log("Tabuaba do " + num + ": \n");
-        for(i=0;i<=10;i++){
-            msg += num + " * " + i + " = " + (parseFloat(num) * parseFloat(i)) + "\n";
-        }
-        console.log(msg + "\n");
-    }  
-}//Fim da função do 12º Exercicio
-
-//Função 13º exercicio
-function exerci13(){
-    N = prompt("Informe um valor: ");
-    if(N <= 0){
-        console.log("Deve ser um número maior que Zero!");
-    }else{
-        for(i=0; i<=N; i++){
-            console.log(i);    
-        }
-    }
-}//Fim da função do 13º Exercicio
-
-//Função 14º exercicio
-function exerci14(){
-    valor[10] = prompt("Por favor informe um valor positivo ou negativo");
-    if(valor < 0){
-        count = count + 1;
-    }
-    console.log("Você digito: " + count + "número negativos");
-}//Fim da função do 14º Exercicio
-operacao();
+document.getElementById("btn1").addEventListener("click", exerci1);
+document.getElementById("btn2").addEventListener("click", exerci2);
+document.getElementById("btn3").addEventListener("click", exerci3);
+document.getElementById("btn4").addEventListener("click", exerci4);
+document.getElementById("btn5").addEventListener("click", exerci5);
+document.getElementById("btn6").addEventListener("click", exerci6);
+document.getElementById("btn7").addEventListener("click", exerci7);
+document.getElementById("btn8").addEventListener("click", exerci8);
+document.getElementById("btn9").addEventListener("click", exerci9);
+document.getElementById("btn11").addEventListener("click", exerci11);

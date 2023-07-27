@@ -1,10 +1,42 @@
-div{
+body{
+    margin: 0;
+}
+
+#div1{
     background-color: deeppink;
-    height: 50px;
+    height: 300px;
+}
+
+#div2{
+    background-color: rgb(230, 84, 162);
+    height: 300px;
+    text-align: center;
 }
 
 h1{
     color: white;
     font-style: Bold;
     text-align: center;
+}
+
+h3{
+    margin-left: 35px;
+}
+
+#caixabtn{
+    margin-left: 35px;
+    column-count: 3;
+}
+
+button{
+    margin-bottom: 5px;
+    margin-right: 5px;
+    height: 30px;
+    background-color: hsla(289, 14%, 77%, 0.3);
+    border: none;
+    box-shadow: 3px 3px 5px rgb(52, 9, 61);
+}
+
+button:hover{
+    background-color: rgb(240, 155, 198);
 }

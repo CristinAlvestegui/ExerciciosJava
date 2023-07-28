@@ -188,10 +188,33 @@ opcao = prompt("Escolha um exercicio");
 exeMenu(opcao);*/
 
 document.getElementById("btn1").addEventListener("click", exerci1);
+function texto1(e){
+    msg = "Escreva um algoritmo que armasene o valor 10 em uma variável A e o valor 20 em uma variável B. A seguir troque os seus conteúdos. ";
+    document.getElementById("magico").innerHTML = msg;
+}
+function semText(){
+    document.getElementById("magico").innerHTML = "";
+}
 document.getElementById("btn2").addEventListener("click", exerci2);
+function texto2(e){
+    msg = "Escreva um algoritmo para ler um valor do teclado e escrever na tela seu antecessor";
+    document.getElementById("magico").innerHTML = msg;
+}
 document.getElementById("btn3").addEventListener("click", exerci3);
+function texto3(e){
+    msg = "Escreva um algoritmo para ler as dimensões de um retângulo, calcular e escrever a área do retângulo";
+    document.getElementById("magico").innerHTML = msg;
+}
 document.getElementById("btn4").addEventListener("click", exerci4);
+function texto4(e){
+    msg = "Faça um algoritmo que leia a idade de uma pessoa expressa em ano, meses e dias e escreva a idade dessa pessoa expressa apenas em dias.";
+    document.getElementById("magico").innerHTML = msg;
+}
 document.getElementById("btn5").addEventListener("click", exerci5);
+function texto5(e){
+    msg = "Escreva um algoritmo para ler o número total de eleitores de um nunicípio, o número de votos brancos, nulos e válidos. Calcular e escrever o porcentual que cada um representa.";
+    document.getElementById("magico").innerHTML = msg;
+}
 document.getElementById("btn6").addEventListener("click", exerci6);
 document.getElementById("btn7").addEventListener("click", exerci7);
 document.getElementById("btn8").addEventListener("click", exerci8);

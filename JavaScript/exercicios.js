@@ -5,55 +5,6 @@ B = 20;
 aux = 0;
 nota1 = 0;
 
-
-/*function menu(){
-    console.log("------Menu------ \n\n" +
-    "  Exercicio 1\n" +
-    "  Exercicio 2\n" +
-    "  Exercicio 3\n" +
-    "  Exercicio 4\n" +
-    "  Exercicio 5\n" +
-    "  Exercicio 6\n" +
-    "  Exercicio 8\n" +
-    "  Exercicio 9\n" +
-    "  Exercicio 11\n" +
-    "  0. Sair");
-}
-function exeMenu(){
-    
-    switch(opcao){
-        case 1:
-            exerci1();
-            break;
-        case 2:
-            exerci2();
-            break;
-        case 3:
-            exerci3();
-            break;
-        case 4:
-            exerci4();
-            break;
-        case 5:
-            exerci5();
-            break;
-        case 6:
-            exerci6();
-            break;
-        case 8:
-            exerci8();
-            break;
-        case 9:
-            exerci9();
-            break;
-        case 11:
-            exerci11();
-            break;
-    }   
-    
-}*/
-
-
 //Função 1º exercicio
 function exerci1(){
     console.log("O valor inicial de A é: " + A);
@@ -108,15 +59,17 @@ function exerci5(){
     votoB = prompt("Informe o número de votos brancos: ");
     votoN = prompt("Informe o número de votos nulos: ");
     votoV = prompt("Informe o número de votos válidos: ");
-    totalV = votoB + votoN + votoV;
-    porBran = parseFloat(votoB) / parseFloat(totalV);
-    porNulo = parseFloat(votoN) / parseFloat(totalV);
-    porVal = parseFloat(votoV) / parseFloat(totalV);
+    totalV = (parseFloat(votoB) + parseFloat(votoN) + parseFloat(votoV));
+    porBran = 100 * (parseFloat(votoB) / parseFloat(totalV));
+    porNulo = 100 * (parseFloat(votoN) / parseFloat(totalV));
+    porVal = 100 * (parseFloat(votoV) / parseFloat(totalV));
     console.log("O numero de Eleitores é: " + elei 
-    + "\nA % de votos em branco foi de: " + porBran +
-    "\nA % de votos nulos foi de: " + porVal +
-    "\nA % de votos válidos foi de: " + porVal + 
-    "\nO total de votos registrados foi de: " + totalV);
+    + " No municiío de: " + muni + "\nForam registrados: " + votoB + " votos em branco"
+    + "\n" + votoN + " votos nulos e " + votoV + " votos válidos"
+    + "\nA % de votos em branco foi de: " + Math.round(porBran) + "%" +
+    "\nA % de votos nulos foi de: " + Math.round(porNulo) + "%" +
+    "\nA % de votos válidos foi de: " + Math.round(porVal) + "%" +
+    "\nO total de votos registrados foi de: " + parseFloat(totalV));
 }//Fim da função do 5º Exercicio
 
 //Função 6º exercicio
@@ -124,7 +77,7 @@ function exerci6(){
     salar = prompt("Informe o salário mensal: ");
     reaju = (parseFloat(salar) * 10.2)/100
     console.log("O reajuste de 2022 foi do 10,2% \n Seu salário é de: " + salar +
-    "\nJunto con o reajuste fico um total de: " + (salar + reaju));
+    "\nJunto con o reajuste fico um total de: R$" + (parseFloat(salar) + parseFloat(reaju)));
 }//Fim da função do 6º Exercicio
 
 //Função 7º exercicio
@@ -133,8 +86,8 @@ function exerci7(){
     cusF = prompt("Informe o Custo de fábrica");
     porF = parseFloat(cusF) + (parseFloat(cusF) * 0.28) + (parseFloat(cusF) * 0.45);904
     total = porF;
-    console.log("O valor registrado foi de: " + cusF +"R$\nJunto com o porcentual do distribuidor e os impostos fico um total de: " +
-    total + "R$");
+    console.log("O valor registrado foi de: R$" + cusF +"\nJunto com o porcentual do distribuidor e os impostos fico um total de: R$" +
+    total);
 
 }
 
@@ -146,10 +99,10 @@ function exerci8(){
     nota2 = prompt("Informe a segunda  nota: ");
     nota3 = prompt("Informe a terceira nota: ");
     media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3))/3
-    console.log( nome + " A média final é de: " + media);
+    console.log( nome + " A média final é de: " + Math.trunc(media));
 }//Fim da função do 8º Exercicio
 
-//Função 8º exercicio
+//Função 9º exercicio
 function exerci9(){
     maca = prompt("Bem-Vindo!\nQuantas maças voçê vai comprar hoje?: ");
     if(maca < 12){
@@ -157,9 +110,24 @@ function exerci9(){
     }else{
         total = parseFloat(maca)
     }
-    console.log("Obrigada pela compra!\nSua compra foi um Total de: "
-    + total + "R$");
+    console.log("Obrigada pela compra!\nSua compra foi um Total de: R$"
+    + total);
 }//Fim da função do 9º Exercicio
+
+//Função 10º exercicio
+function exerci10(){
+    //lEER 10 VALORES E ORDENAR DE FORMA CRESCENTE
+    val1 = prompt("Digite um Valor");
+    val2 = prompt("Digite um Valor");
+    val3 = prompt("Digite um Valor");
+    val4 = prompt("Digite um Valor");
+    val5 = prompt("Digite um Valor");
+    val6 = prompt("Digite um Valor");
+    val7 = prompt("Digite um Valor");
+    val8 = prompt("Digite um Valor");
+    val9 = prompt("Digite um Valor");
+    val10 = prompt("Digite um Valor");
+}
 
 //Função 11º exercicio
 function exerci11(){
@@ -171,7 +139,7 @@ function exerci11(){
     console.log( nome + " o saldo atual é de: " + parseFloat(saldo) + "R$");
     debit = prompt("Os Débitos: ");
     credi = prompt("Ultimo! .... Créditos: ");
-    salnow = (saldo - debit - credi); /*só pode ser subtração...quando pago no débito o saldo é descontado na hora!
+    salnow = (parseFloat(saldo) - parseFloat(debit) - parseFloat(credi)); /*só pode ser subtração...quando pago no débito o saldo é descontado na hora!
     mas no crédito é igual a unica diferença é que vc vai pagar depois... só pode subtrair
     Banco suspeito...
     */
@@ -183,9 +151,11 @@ function exerci11(){
     }
 }//Fim da função do 11º Exercicio
 
-/*menu();
-opcao = prompt("Escolha um exercicio");
-exeMenu(opcao);*/
+//Função 12º exercicio
+function exerci12(){
+
+}//Fim da função do 12º Exercicio
+
 
 document.getElementById("btn1").addEventListener("click", exerci1);
 function texto1(e){
@@ -216,7 +186,43 @@ function texto5(e){
     document.getElementById("magico").innerHTML = msg;
 }
 document.getElementById("btn6").addEventListener("click", exerci6);
+function texto6(e){
+    msg = "Escreva um algoritmo para ler o salário mensal atual de um funcionario e o percentual de reajuste. Calcular e escrever o valor do novo salário";
+    document.getElementById("magico").innerHTML = msg;
+}
 document.getElementById("btn7").addEventListener("click", exerci7);
+function texto7(e){
+    msg = "O custo de um carro novo ao consumidor é a soma do custo de fábrica" +
+    "com a porcentagem do distribuidor e dos impostos. " +
+    "Supondo que o percentual do distribuidor seja de 28% e os impostos de 45%" + 
+    "escrever um algoritmo para calcular e escrever o custo ao consumidor";
+    document.getElementById("magico").innerHTML = msg;
+}
 document.getElementById("btn8").addEventListener("click", exerci8);
+function texto8(e){
+    msg = "Faca um algoritmo que leia três notas de um aluno, calcule e escreva a média dinal deste aluno";
+    document.getElementById("magico").innerHTML = msg;
+}
 document.getElementById("btn9").addEventListener("click", exerci9);
+function texto9(e){
+    msg = "As maças cutam R$ 1,30 cada se forem compradas menos de uma dúzia, e R$ 1,00 se forem compradas pelo menos 12" + 
+    ". Escreva um programa que leia o número de maças compradas, calcule e escreva o custo total da compra ";
+    document.getElementById("magico").innerHTML = msg;
+}
+document.getElementById("btn10").addEventListener("click", exerci10);
+function texto10(e){
+    msg = "Ler 10 valores (considere que não serão lidos valores iguais) e escrevê-los em ordem crescrente";
+    document.getElementById("magico").innerHTML = msg;
+}
 document.getElementById("btn11").addEventListener("click", exerci11);
+function texto11(e){
+    msg = "Faça um algoritmo para ler: número da conta do cliente, saldo, debito e crédito. Após, calcular e escrever o saldo atual" +
+    "saldo atual = saldo - débito + crédito. Também testar se saldo atual for maior ou igual a zero escrever a mensagem 'Saldo positivo'" +
+    ",senão escrever a mensagem 'Saldo negativo'";
+    document.getElementById("magico").innerHTML = msg;
+}
+document.getElementById("btn12").addEventListener("click", exerci12);
+function texto12(e){
+    msg = "Ler um valor inteiro (aceitar somente valores entre 1 e 10) e escrevera tabuada de 1 a 10do valor lido";
+    document.getElementById("magico").innerHTML = msg;
+}

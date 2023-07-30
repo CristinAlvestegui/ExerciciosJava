@@ -4,12 +4,14 @@ body{
 
 #div1{
     background-color: deeppink;
-    height: 300px;
+    height: 350px;
 }
 
 #div2{
+    margin-top: 2%;
+    padding-top: 2%;
     background-color: rgb(230, 84, 162);
-    height: 300px;
+    height: 200px;
     text-align: center;
 }
 
@@ -39,6 +41,10 @@ button{
 
 button:hover{
     background-color: rgb(240, 155, 198);
+}
+
+#btn9{
+    width: 88px;
 }
 
 #magico{

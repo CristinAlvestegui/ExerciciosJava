@@ -7,20 +7,20 @@ nota1 = 0;
 
 //Função 1º exercicio
 function exerci1(){
-    console.log("O valor inicial de A é: " + A);
-    console.log("O valor inicial de B é: " + B);
+    console.log(`O valor inicial de A é: ${A}`);
+    console.log(`O valor inicial de B é: ${B}`);
     aux = A;
     A = B;
     B = aux;
-    console.log("Depois da troca o valor de A é: " + A);
-    console.log("Depois da troca o valor de B é: " + B);
+    console.log(`Depois da troca o valor de A é: ${A}`);
+    console.log(`Depois da troca o valor de B é: ${B}`);
 }//Fim da função do 1º Exercicio
 
 //Função 2º exercicio
 function exerci2(){
     num1 = prompt("Digite um número: ");
     resultado = num1 - 1;
-    console.log("O antecessor do número: " + num1 + " é: " + resultado);
+    console.log(`O antecessor do número: ${num1} é: ${resultado}`);
 }//Fim da função do 2º Exercicio
 
 //Função 3º exercicio
@@ -33,7 +33,7 @@ function exerci3(){
     }else{
         area = base * altura;
     }*/
-    console.log("A Área de retângulo é: " + area);
+    console.log(`A Área de retângulo é: ${area}`);
 }//Fim da função do 3º Exercicio
 
 //Função 4º exercicio
@@ -41,15 +41,11 @@ function exerci4(){
     mes = prompt("Informe o mes do seu aniversário: ");
     dia = prompt("Informe o dia do seu aniversário: ");
     idade = prompt("Informa sua Idade em anos: ");
-    if(mes == 2){
-        resultado = (mes * 28)
-    }else{
-        resultado = (mes * 30)
-    }
+    mes === 2 ? resultado = (mes * 28) : resultado = (mes * 30);
     resulAno = idade * 365;
-    console.log("Sua idade: " + idade + " expressa em dias é: " + resulAno);
-    console.log("O mês: " + mes + " expresso em dias é: " + resultado);
-    console.log("A soma todos os dias fazem um total de: " + (resultado + resulAno + dia));
+    console.log(`Sua idade: ${idade} expressa em dias é: ${resulAno}`);
+    console.log(`O mês: ${mes} expresso em dias é: ${resultado}`);
+    console.log(`A soma todos os dias fazem um total de:  ${resultado + resulAno + dia}`);
 }//Fim da função do 4º Exercicio
 
 //Função 5º exercicio
@@ -76,8 +72,8 @@ function exerci5(){
 function exerci6(){
     salar = prompt("Informe o salário mensal: ");
     reaju = (parseFloat(salar) * 10.2)/100
-    console.log("O reajuste de 2022 foi do 10,2% \n Seu salário é de: " + salar +
-    "\nJunto con o reajuste fico um total de: R$" + (parseFloat(salar) + parseFloat(reaju)));
+    console.log(`O reajuste de 2022 foi do 10,2% \n Seu salário é de: ${salar}
+    \nJunto con o reajuste fico um total de: R$` + (parseFloat(salar) + parseFloat(reaju)));
 }//Fim da função do 6º Exercicio
 
 //Função 7º exercicio
@@ -86,74 +82,94 @@ function exerci7(){
     cusF = prompt("Informe o Custo de fábrica");
     porF = parseFloat(cusF) + (parseFloat(cusF) * 0.28) + (parseFloat(cusF) * 0.45);904
     total = porF;
-    console.log("O valor registrado foi de: R$" + cusF +"\nJunto com o porcentual do distribuidor e os impostos fico um total de: R$" +
-    total);
+    console.log(`O valor registrado foi de: R$ ${cusF}\nJunto com o porcentual do distribuidor e os impostos fico um total de: R$${total}`);
 
 }
 
 //Função 8º exercicio
 function exerci8(){
-    nome = prompt("Informe seu Nome: ");
-    console.log("Bem-Vindo! " + nome +", ao portal de Notas!");
+    nome = prompt("Informe seu Nome: ") || "Desconhecido";
+    console.log(`"Bem-Vindo! ${nome}, ao portal de Notas!"`);
     nota1 = prompt("Informe a primeira nota: ");
+    console.log(`1ra Nota registrada é de: ${nota1}`);
     nota2 = prompt("Informe a segunda  nota: ");
+    console.log(`2da Nota registrada é de: ${nota2}`);
     nota3 = prompt("Informe a terceira nota: ");
+    console.log(`3ra Nota registrada é de: ${nota3}`);
     media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3))/3
-    console.log( nome + " A média final é de: " + Math.trunc(media));
+    nome ==="Desconhecido" ? console.log(`${nome} por favor da proxima vez informe seu nome` + "\nA média final é de:"+ Math.trunc(media)): console.log( `${nome} A média final é de:`+ Math.trunc(media));
 }//Fim da função do 8º Exercicio
 
 //Função 9º exercicio
 function exerci9(){
     maca = prompt("Bem-Vindo!\nQuantas maças voçê vai comprar hoje?: ");
-    if(maca < 12){
+    maca < 12 ? total = parseFloat(maca) * 1.3 : total = parseFloat(maca);
+    /*if(maca < 12){
         total = parseFloat(maca) * 1.3
     }else{
         total = parseFloat(maca)
-    }
-    console.log("Obrigada pela compra!\nSua compra foi um Total de: R$"
-    + total);
+    }*/
+    console.log(`Obrigada pela compra!\nSua compra foi um Total de: R$${total}`);
 }//Fim da função do 9º Exercicio
 
 //Função 10º exercicio
 function exerci10(){
-    //lEER 10 VALORES E ORDENAR DE FORMA CRESCENTE
-    val1 = prompt("Digite um Valor");
-    val2 = prompt("Digite um Valor");
-    val3 = prompt("Digite um Valor");
-    val4 = prompt("Digite um Valor");
-    val5 = prompt("Digite um Valor");
-    val6 = prompt("Digite um Valor");
-    val7 = prompt("Digite um Valor");
-    val8 = prompt("Digite um Valor");
-    val9 = prompt("Digite um Valor");
-    val10 = prompt("Digite um Valor");
+    //Temos que percorrer um vetor, e percorrer ele e verificar cada indice e compara ele com um valor dentro do vetor
+    const vetor = [10];
+    vetor[0] = prompt("Digite um Valor");
+    vetor[1] = prompt("Digite outro Valor");
+    vetor[2] = prompt("Mais um Valor");
+    vetor[3] = prompt("Porfavor digite um Valor");
+    vetor[4] = prompt("Digite um Valor");
+    vetor[5] = prompt("Digite um Valor");
+    vetor[6] = prompt("Digite um Valor");
+    vetor[7] = prompt("Digite um Valor");
+    vetor[8] = prompt("Digite um Valor");
+    vetor[9] = prompt("Digite um Valor");
+    texto = "Você digito os seguintes valores: " + vetor;
+    //E se fizessemos o for para os indices do vetor???? um For loop para preencher o prompt??
+    document.getElementById("nove").innerHTML = texto;
 }
 
 //Função 11º exercicio
 function exerci11(){
-    nome = prompt("Informe seu Nome: ");
-    console.log("Bem-Vindo! " + nome +", ao portal do SenaBank");
-    conta = prompt("Por favor informe o número de sua conta: ");
-    console.log("CC: " + conta);
+    nome = prompt("Informe seu Nome: ") || "Desconhecido";
+    console.log(`Bem-Vindo! ${nome} , ao portal do SenaBank`);
+    conta = prompt("Por favor informe o número de sua conta: ")|| "Não Informada";
+    console.log(`CC: ${conta}`);
     saldo = prompt("Agora informe seu saldo: ");
-    console.log( nome + " o saldo atual é de: " + parseFloat(saldo) + "R$");
+    console.log( `${nome} o saldo atual é de: ` + parseFloat(saldo) + "R$");
     debit = prompt("Os Débitos: ");
     credi = prompt("Ultimo! .... Créditos: ");
     salnow = (parseFloat(saldo) - parseFloat(debit) - parseFloat(credi)); /*só pode ser subtração...quando pago no débito o saldo é descontado na hora!
     mas no crédito é igual a unica diferença é que vc vai pagar depois... só pode subtrair
     Banco suspeito...
     */
-    if(salnow <= 0){
-       console.log(":(  Saldo Negativo!  x.X \n\n" + salnow + "R$");
+
+    salnow <= 0 ? console.log(`":(  Saldo Negativo!  x.X \n\n R$${salnow} `): console.log(`":)  Saldo Possitivo!  x.X \n\n" R$${salnow} `);
+
+    /*if(salnow <= 0){
+       console.log(`":(  Saldo Negativo!  x.X \n\n R$${salnow} `);
        //Quero colocar uma tag de tabela aqui.
     }else{
-        console.log(":)  Saldo Possitivo!  x.X \n\n" + salnow + "R$");
-    }
+        console.log(`":)  Saldo Possitivo!  x.X \n\n" R$${salnow} `);
+    }*/
 }//Fim da função do 11º Exercicio
 
 //Função 12º exercicio
 function exerci12(){
+    num1 = prompt("Digite um valor")
+    if(num1 > 10){
+        alert("Por favor digite um valor entre 1 e 10")
+        num1 = prompt("Digite um valor")
+    } else if (num1 == 0){
+        alert("Por favor digite um valor entre 1 e 10")
+        num1 = prompt("Digite um valor")
+    }
 
+    for(let i = 1; i>10; i++){
+        console.log(parseFloat(num1) + "X" + i + "=" + (parseFloat(num1)*i));
+    }
 }//Fim da função do 12º Exercicio
 
 

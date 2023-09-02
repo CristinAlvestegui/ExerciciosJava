@@ -9,10 +9,10 @@
     <title>Exercicios</title>
 </head>
 <body>
-    <div id="div1">
+    <main id="div1">
         <h1>Exercicios com Java Script!</h1>
         <h3>Escolha um exercicio</h3>
-        <div id="caixabtn">
+        <section id="caixabtn">
             <button id="btn1" onmousemove="texto1(event)" onmouseout=semText()>1º Exercicio</button>
             <button id="btn2" onmousemove="texto2(event)" onmouseout=semText()>2º Exercicio</button>
             <button id="btn3" onmousemove="texto3(event)" onmouseout=semText()>3º Exercicio</button>
@@ -25,19 +25,21 @@
             <button id="btn10" onmousemove="texto10(event)" onmouseout=semText()>10º Exercicio</button>
             <button id="btn11" onmousemove="texto11(event)" onmouseout=semText()>11º Exercicio</button>
             <button id="btn12" onmousemove="texto12(event)" onmouseout=semText()>12º Exercicio</button>
-        </div><!--Fim do div caixabtn-->
-        <div id="magico">
-
-        </div>
-    </div><!--Fim do div div1-->
-
-    <div id="div2">
-        <p>Exercicio feito para treinamento de Console e Prompt em Java Script</p>
-        <h5>Feito por:</h5>
+        </section><!--Fim do section caixabtn-->
+        <div id="magico"></div><!--Fim do div mágico-->
         
-        <p><strong>Cristina Alvéstegui Subieta</strong> <br>
-            TI13N
+
+        <p id="dez"></p>
+    </main><!--Fim do main div1-->
+    <hr>
+    <button onclick="showMacas()"> ver maças 🍎</button>
+    <div id="lojaMacas"></div>
+    <footer id="div2">
+        <p>Exercicio feito para treinamento de <strong>Console e Prompts</strong> em Java Script</p>
+        <h5>Feito por:</h5>
+        <p><strong>Cristina Alvéstegui Subieta</strong> <br><br>
+            <small>TI13N</small>
         </p>
-    </div>
+    </footer>
 </body>
 </html>

@@ -20,20 +20,27 @@ function exerci1(){
 function exerci2(){
     num1 = prompt("Digite um número: ");
     resultado = num1 - 1;
-    console.log(`O antecessor do número: ${num1} é: ${resultado}`);
+    //console.log(`O antecessor do número: ${num1} é: ${resultado}`);
+    //typeof num1 === 'number'? console.log(`O antecessor do número: ${num1} é: ${resultado}`): alert(`Parece que você digitou ${num1}, por favor digite um número válido`);
+    
 }//Fim da função do 2º Exercicio
 
 //Função 3º exercicio
 function exerci3(){
     base = prompt("Informe o valor para a base do retângulo: ")
+    console.log(`A base do retângulo é: ${base}`);
+    //typeof base === 'string' ? alert(`Achou que você digitou as letras ${base}, por favor informe um número válido`): console.log(`A base do retângulo é: ${base}`);
     altura = prompt("Informe o valor para altura do retângulo: ");
+    console.log(`A altura do retângulo é: ${altura}`);
     area = base * altura;
+    //typeof altura === 'string' ? alert(`Achou que você digitou as letras ${altura}, por favor informe um número válido`): console.log(`A altura do retângulo é: ${altura}`);
+    console.log(`${base} * ${altura} = Área de retângulo é : ${area}`);
     /*if(base < 0 && altura < 0){
         console.log("Por favor informe un valor positivo! ");
     }else{
         area = base * altura;
     }*/
-    console.log(`A Área de retângulo é: ${area}`);
+    
 }//Fim da função do 3º Exercicio
 
 //Função 4º exercicio
@@ -97,7 +104,7 @@ function exerci8(){
     nota3 = prompt("Informe a terceira nota: ");
     console.log(`3ra Nota registrada é de: ${nota3}`);
     media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3))/3
-    nome ==="Desconhecido" ? console.log(`${nome} por favor da proxima vez informe seu nome` + "\nA média final é de:"+ Math.trunc(media)): console.log( `${nome} A média final é de:`+ Math.trunc(media));
+    nome === "Desconhecido" ? console.log(`${nome} por favor da proxima vez informe seu nome` + "\nA média final é de:"+ Math.trunc(media)): console.log( `${nome} A média final é de:`+ Math.trunc(media));
 }//Fim da função do 8º Exercicio
 
 //Função 9º exercicio
@@ -126,9 +133,11 @@ function exerci10(){
     vetor[7] = prompt("Digite um Valor");
     vetor[8] = prompt("Digite um Valor");
     vetor[9] = prompt("Digite um Valor");
-    texto = "Você digito os seguintes valores: " + vetor;
+    ordem = vetor.sort(function(a, b){return a - b});
+    texto = `Você digito os seguintes valores: ${vetor} , Em ordem crescente seria: ${ordem}`;
     //E se fizessemos o for para os indices do vetor???? um For loop para preencher o prompt??
-    document.getElementById("nove").innerHTML = texto;
+    document.getElementById("dez").innerHTML = texto;
+    console.log(ordem);
 }
 
 //Função 11º exercicio
@@ -219,12 +228,18 @@ function texto8(e){
     msg = "Faca um algoritmo que leia três notas de um aluno, calcule e escreva a média dinal deste aluno";
     document.getElementById("magico").innerHTML = msg;
 }
-document.getElementById("btn9").addEventListener("click", exerci9);
+
+document.getElementById("btn9").addEventListener("click", exerci9, showMacas);
 function texto9(e){
     msg = "As maças cutam R$ 1,30 cada se forem compradas menos de uma dúzia, e R$ 1,00 se forem compradas pelo menos 12" + 
     ". Escreva um programa que leia o número de maças compradas, calcule e escreva o custo total da compra ";
     document.getElementById("magico").innerHTML = msg;
 }
+function showMacas(){
+    document.getElementById("lojaMacas").classList.toggle("estiloLoja");
+    
+}
+
 document.getElementById("btn10").addEventListener("click", exerci10);
 function texto10(e){
     msg = "Ler 10 valores (considere que não serão lidos valores iguais) e escrevê-los em ordem crescrente";
@@ -239,6 +254,6 @@ function texto11(e){
 }
 document.getElementById("btn12").addEventListener("click", exerci12);
 function texto12(e){
-    msg = "Ler um valor inteiro (aceitar somente valores entre 1 e 10) e escrevera tabuada de 1 a 10do valor lido";
+    msg = "Ler um valor inteiro (aceitar somente valores entre 1 e 10) e escrevera tabuada de 1 a 10 do valor lido";
     document.getElementById("magico").innerHTML = msg;
 }

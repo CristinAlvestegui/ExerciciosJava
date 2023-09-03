@@ -20,7 +20,7 @@ function exerci1(){
 function exerci2(){
     num1 = prompt("Digite um número: ");
     resultado = num1 - 1;
-    //console.log(`O antecessor do número: ${num1} é: ${resultado}`);
+    console.log(`O antecessor do número: ${num1} é: ${resultado}`);
     //typeof num1 === 'number'? console.log(`O antecessor do número: ${num1} é: ${resultado}`): alert(`Parece que você digitou ${num1}, por favor digite um número válido`);
     
 }//Fim da função do 2º Exercicio

@@ -1,10 +1,19 @@
 body{
     margin: 0;
 }
+title{
+   font-family: 'Rubik Doodle Triangles',
+}
+.textto{
+    padding: 4%
+}
 
 #div1{
     background-color: deeppink;
-    height: 350px;
+    height: 600px;
+
+    /**/
+    
 }
 
 #div2{
@@ -48,7 +57,36 @@ button:hover{
 }
 
 #magico{
+    padding: 4%;
     margin: 5% 5%;
     padding: 1% 1%;
     background-color: orchid;
+    
+    
+}
+
+#estiloLoja{
+    background-image: url(../fotos/macas.jpeg);
+    background-size: 100px 80px;
+    background-color: pink;
+}
+
+@media only screen and (max-width: 700px) {
+    body{
+        background-color: pink;
+    }
+    #div1{
+        background-color: deeppink;
+        height: 550px;
+        width: 65%;
+        /**/
+        
+    }
+    #magico{
+        width: 50%;
+        position: relative;
+        left: 430px;
+        bottom: 300px;
+    }
+
 }

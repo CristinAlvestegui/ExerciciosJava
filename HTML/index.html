@@ -7,31 +7,57 @@
     <script type="text/JavaScript" src="../JavaScript/exercicios.js" defer></script>
     <link rel="stylesheet" type="text/css" href="../CSS/efeitos.css"></link>
     <title>Exercicios</title>
+    <link rel="shortcut icon type" type="imagem/x-icon" href="../fotos/cerebro.png"/>
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Triangles&display=swap" rel="stylesheet">
+
+    <style>
+        #estiloLoja{
+        background-image: url(../fotos/macas.jpeg);
+        background-size: 100px 80px;
+        }
+    </style>
 </head>
 <body>
     <main id="div1">
         <h1>Exercicios com Java Script!</h1>
-        <h3>Escolha um exercicio</h3>
-        <section id="caixabtn">
-            <button id="btn1" onmousemove="texto1(event)" onmouseout=semText()>1º Exercicio</button>
-            <button id="btn2" onmousemove="texto2(event)" onmouseout=semText()>2º Exercicio</button>
-            <button id="btn3" onmousemove="texto3(event)" onmouseout=semText()>3º Exercicio</button>
-            <button id="btn4" onmousemove="texto4(event)" onmouseout=semText()>4º Exercicio</button>
-            <button id="btn5" onmousemove="texto5(event)" onmouseout=semText()>5º Exercicio</button>
-            <button id="btn6" onmousemove="texto6(event)" onmouseout=semText()>6º Exercicio</button>
-            <button id="btn7" onmousemove="texto7(event)" onmouseout=semText()>7º Exercicio</button>
-            <button id="btn8" onmousemove="texto8(event)" onmouseout=semText()>8º Exercicio</button>
-            <button id="btn9" onmousemove="texto9(event)" onmouseout=semText()>9º Exercicio</button>
-            <button id="btn10" onmousemove="texto10(event)" onmouseout=semText()>10º Exercicio</button>
-            <button id="btn11" onmousemove="texto11(event)" onmouseout=semText()>11º Exercicio</button>
-            <button id="btn12" onmousemove="texto12(event)" onmouseout=semText()>12º Exercicio</button>
-        </section><!--Fim do section caixabtn-->
+        <div>
+            <p class="textto">Bem Vindo! </p><!--aqui podemose fazer un form PHP para inserir nome, e mostrar aqui, ver codeacademy-->
+            <p class="textto">Para inicia basta clicar no botão direito do mouse, manter o mouse sobre o botão pra ver detalhes sobre o exercicio escolhido, tomar en consideração que precisa abrir o console</p>
+            <p class="textto">Instruções aqui!👇🏼</p><!--fazer um botão para ver o manual-->
+            <h3>Escolha um exercicio</h3>
+            <section id="caixabtn">
+                <button id="btn1" onmousemove="texto1(event)" onmouseout=semText()>1º Exercicio</button>
+                <button id="btn2" onmousemove="texto2(event)" onmouseout=semText()>2º Exercicio</button>
+                <button id="btn3" onmousemove="texto3(event)" onmouseout=semText()>3º Exercicio</button>
+                <button id="btn4" onmousemove="texto4(event)" onmouseout=semText()>4º Exercicio</button>
+                <button id="btn5" onmousemove="texto5(event)" onmouseout=semText()>5º Exercicio</button>
+                <button id="btn6" onmousemove="texto6(event)" onmouseout=semText()>6º Exercicio</button>
+                <button id="btn7" onmousemove="texto7(event)" onmouseout=semText()>7º Exercicio</button>
+                <button id="btn8" onmousemove="texto8(event)" onmouseout=semText()>8º Exercicio</button>
+                <button id="btn9" onmousemove="texto9(event)" onmouseout=semText()>9º Exercicio</button>
+                <button id="btn10" onmousemove="texto10(event)" onmouseout=semText()>10º Exercicio</button>
+                <button id="btn11" onmousemove="texto11(event)" onmouseout=semText()>11º Exercicio</button>
+                <button id="btn12" onmousemove="texto12(event)" onmouseout=semText()>12º Exercicio</button>
+            </section><!--Fim do section caixabtn-->
+        </div> 
+        
+        
         <div id="magico"></div><!--Fim do div mágico-->
         
 
         <p id="dez"></p>
+        <p id="dez2"></p>
     </main><!--Fim do main div1-->
     <hr>
+    <script>
+        function showMacas(){
+        document.getElementById("lojaMacas").classList.toggle("estiloLoja");
+        
+    }
+    </script>
     <button onclick="showMacas()"> ver maças 🍎</button>
     <div id="lojaMacas"></div>
     <footer id="div2">
